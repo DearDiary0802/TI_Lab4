@@ -10,7 +10,7 @@ namespace TI_Lab4
         public static string ResultOfCrypting;
         public static ulong Key()
         {
-            key = ((((key >> 0) ^ (key >> 5) ^ (key >> 23)) & 1) << 31) | (key >> 1);
+            key = ((((key >> 0) ^ (key >> 4) ^ (key >> 22)) & 1) << 31) | (key >> 1);
             return key & 1;
         }
         public static void LFSR1_Crypt(ulong inputKey)
